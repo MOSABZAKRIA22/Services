@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StaffDirect - Premium Recruitment</title>
+<title>StaffDirect London - Premium Recruitment</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; }
+:root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; --green: #28a745; }
 * {box-sizing: border-box; margin: 0; padding: 0;}
 body { 
   background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); 
@@ -26,11 +26,25 @@ body {
   border-top: 6px solid var(--gold); 
   box-shadow: 0 15px 50px rgba(0,0,0,0.4); 
 }
-.logo-img { width: 170px; display: block; margin: 0 auto 15px; }
+.logo-img { width: 170px; display: block; margin: 0 auto 10px; }
+.city {text-align: center; font-size: 14px; font-weight: 600; color: var(--orange); letter-spacing: 3px; margin-bottom: 5px;}
 .brand {text-align: center; font-size: 30px; font-weight: 700; color: var(--navy); letter-spacing: 1px;}
 .subtitle {text-align: center; color: var(--orange); font-size: 13px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;}
 h2 {text-align: center; color: var(--navy); margin: 15px 0 8px; font-size: 24px; font-weight: 700;}
 .desc {text-align: center; color: #666; margin-bottom: 25px; font-size: 14px; line-height: 1.6;}
+
+.success-message {
+  background: #d4edda;
+  color: var(--green);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  display: none;
+}
+
 .form-group {margin-bottom: 18px; text-align: left;}
 label {display: block; color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px;}
 input, select {
@@ -59,24 +73,29 @@ input:focus, select:focus {border-color: var(--gold); outline: none; background:
   box-shadow: 0 5px 20px rgba(212,175,55,0.4);
 }
 .btn:hover {transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212,175,55,0.6);}
-.footer {text-align: center; margin-top: 20px; font-size: 12px; color: #999;}
+.footer {text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999;}
 </style>
 </head>
 <body>
 <div class="container">
 
 <img src="images.jpeg" alt="StaffDirect Logo" class="logo-img">
+<div class="city">LONDON</div>
 <div class="brand">STAFFDIRECT</div>
 <div class="subtitle">Premium Recruitment Services</div>
 
 <h2>Job Application Form</h2>
 <p class="desc">Fill out the form below and our recruitment team will contact you within 24 hours.</p>
 
-<form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST">
+<div id="success" class="success-message">
+  ✅ Data sent successfully! We will contact you soon.
+</div>
 
-  <!-- ده اهم سطر: بيرجعك لموقعك بعد الارسال -->
-  <input type="hidden" name="_next" value="https://mosabzakria22.github.io/Services/">
-  <input type="hidden" name="_subject" value="New Job Application - StaffDirect">
+<form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST" id="applicationForm">
+
+  <!-- انا عدلت السطر ده خلاص -->
+  <input type="hidden" name="_next" value="https://mosabzakria22.github.io/Services/#success">
+  <input type="hidden" name="_subject" value="New Job Application - StaffDirect London">
   <input type="hidden" name="_captcha" value="false">
 
   <div class="form-group">
@@ -104,12 +123,10 @@ input:focus, select:focus {border-color: var(--gold); outline: none; background:
     <select name="Country" required>
       <option value="">Select your country</option>
       <option>Nepal</option>
-      <option>Afghanistan</option>
       <option>Bangladesh</option>
-      <option>Canada</option>
-      <option>Egypt</option>
       <option>India</option>
       <option>Pakistan</option>
+      <option>Egypt</option>
       <option>Saudi Arabia</option>
       <option>UAE</option>
       <option>UK</option>
@@ -136,9 +153,17 @@ input:focus, select:focus {border-color: var(--gold); outline: none; background:
 </form>
 
 <div class="footer">
-  © 2026 StaffDirect. All rights reserved.
+  © 2026 StaffDirect London. All Rights Reserved.
 </div>
 
 </div>
+
+<script>
+if(window.location.hash === "#success"){
+  document.getElementById('success').style.display = 'block';
+  window.scrollTo(0,0);
+}
+</script>
+
 </body>
 </html>
