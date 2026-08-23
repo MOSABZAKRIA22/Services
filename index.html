@@ -3,28 +3,40 @@
 <head> 
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>Staff Direct - Job Application</title> 
+<title>StaffDirect London - Job Application</title> 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
 <style> 
 :root { --navy: #0A1F44; --gold: #D4AF37; } 
 * {box-sizing: border-box;} 
 body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Poppins', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
-.box { background: #fff; max-width: 600px; width: 100%; padding: 40px 30px; border-radius: 16px; border-top: 5px solid var(--gold); text-align: center;} 
-.logo-wrap {display: flex; align-items: center; justify-content: center; gap: 10px;} 
-.logo-icon { width: 45px; height: 45px; background: var(--gold); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--navy); font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; } 
-.logo {font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--navy);} 
-.tag {color: var(--gold); font-size: 11px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;} 
+.box { background: #fff; max-width: 600px; width: 100%; padding: 40px 30px; border-radius: 16px; border-top: 5px solid var(--gold); text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.3);} 
+
+/* اللوغو */
+.logo-img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 15px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.logo {font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--navy); letter-spacing: 1px;} 
+.tag {color: var(--gold); font-size: 12px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px;} 
 h2 {color: var(--navy); margin: 15px 0 5px; font-size: 24px;} 
 p {color: #555; margin-bottom: 25px; font-size: 14px;} 
 input, select {width: 100%; padding: 14px 15px; margin-bottom: 15px; border: 2px solid #eee; border-radius: 10px; font-family: 'Poppins'; font-size: 15px; text-align: left; transition: 0.3s;} 
-input:focus, select:focus {border-color: var(--gold); outline: none;} 
-.btn {width: 100%; padding: 16px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; font-family: 'Poppins'; transition: 0.3s;} 
-.btn:hover {transform: translateY(-2px);} 
+input:focus, select:focus {border-color: var(--gold); outline: none; box-shadow: 0 0 0 3px rgba(212,175,55,0.2);} 
+.btn {width: 100%; padding: 16px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; font-family: 'Poppins'; transition: 0.3s; box-shadow: 0 4px 15px rgba(212,175,55,0.4);} 
+.btn:hover {transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212,175,55,0.6);} 
 </style> 
 </head> 
 <body> 
 <div class="box"> 
-<div class="logo-wrap"> <div class="logo-icon">SD</div> <div class="logo">STAFF DIRECT</div> </div> 
+
+<!-- لوغو StaffDirect London -->
+<img src="https://i.imgur.com/8QZQZQZ.png" alt="StaffDirect London Logo" class="logo-img">
+
+<div class="logo">STAFFDIRECT LONDON</div> 
 <div class="tag">Premium Hospitality Recruitment</div> 
 <h2>Job Application</h2> 
 <p>Fill the form and we will contact you within 24 hours</p> 
@@ -32,7 +44,7 @@ input:focus, select:focus {border-color: var(--gold); outline: none;}
 <form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST">
   
   <input type="hidden" name="_next" value="https://mosabzakria22.github.io">
-  <input type="hidden" name="_subject" value="New Job Application - Staff Direct">
+  <input type="hidden" name="_subject" value="New Job Application - StaffDirect London">
   <input type="hidden" name="_captcha" value="false">
 
   <input name="Full Name" placeholder="Full Name *" required>
@@ -47,17 +59,18 @@ input:focus, select:focus {border-color: var(--gold); outline: none;}
     <option>Canada</option><option>China</option><option>Egypt</option><option>France</option>
     <option>Germany</option><option>India</option><option>Indonesia</option><option>Iraq</option>
     <option>Jordan</option><option>Kuwait</option><option>Lebanon</option><option>Libya</option>
-    <option>Malaysia</option><option>Morocco</option><option>Nigeria</option><option>Oman</option>
-    <option>Pakistan</option><option>Qatar</option><option>Saudi Arabia</option><option>Sudan</option>
-    <option>Syria</option><option>Tunisia</option><option>Turkey</option><option>UAE</option>
-    <option>UK</option><option>USA</option><option>Yemen</option><option>Other</option>
+    <option>Malaysia</option><option>Morocco</option><option>Nepal</option>
+    <option>Nigeria</option><option>Oman</option><option>Pakistan</option><option>Qatar</option>
+    <option>Saudi Arabia</option><option>Sudan</option><option>Syria</option><option>Tunisia</option>
+    <option>Turkey</option><option>UAE</option><option>UK</option><option>USA</option>
+    <option>Yemen</option><option>Other</option>
   </select>
 
   <select name="Job Position" required>
     <option value="">Select Job Position *</option>
     <option>Receptionist</option><option>Housekeeping</option>
     <option>Chef</option><option>Waiter/Waitress</option>
-    <option>Room Service</option><option>Manager</option><option>Other</option>
+    <option>Room Service</option><option>Hotel Manager</option><option>Other</option>
   </select>
 
   <button type="submit" class="btn">Create Account & Submit</button>
