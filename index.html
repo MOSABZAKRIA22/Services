@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+  <!DOCTYPE html> 
 <html lang="en" dir="ltr"> 
 <head> 
 <meta charset="UTF-8"> 
@@ -6,37 +6,19 @@
 <title>Staff.Direct London - Premium Hospitality Recruitment</title> 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
 <style> 
-:root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; --green: #27AE60; } 
+:root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; } 
 * {box-sizing: border-box; margin: 0; padding: 0;} 
 body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Poppins', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
-
 .container { background: #fff; max-width: 650px; width: 100%; padding: 50px 35px; border-radius: 20px; border-top: 6px solid var(--gold); box-shadow: 0 15px 50px rgba(0,0,0,0.4); text-align: center; }
-
-.logo-img { width: 180px; height: auto; margin: 0 auto 20px; object-fit: contain; }
+.logo-img { width: 180px; height: auto; margin: 0 auto 20px; }
 .brand {font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--navy);} 
 .subtitle {color: var(--orange); font-size: 13px; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;} 
 h2 {color: var(--navy); margin: 20px 0 8px; font-size: 26px;} 
 .desc {color: #666; margin-bottom: 30px; font-size: 15px;} 
-
 .form-group {text-align: left; margin-bottom: 18px;}
 label {display: block; color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px;}
 input, select {width: 100%; padding: 15px 16px; border: 2px solid #eee; border-radius: 12px; font-family: 'Poppins'; font-size: 15px;} 
 .btn {width: 100%; padding: 18px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer;}
-
-/* رسالة النجاح */
-.success-message {
-  display: none;
-  background: #D4EDDA;
-  color: var(--green);
-  padding: 15px;
-  border-radius: 10px;
-  border: 2px solid var(--green);
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-.success-message.show {display: block; animation: fadeIn 0.5s;}
-@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
 </style> 
 </head> 
 <body> 
@@ -48,22 +30,16 @@ input, select {width: 100%; padding: 15px 16px; border: 2px solid #eee; border-r
   <div class="subtitle">Premium Hospitality Recruitment</div> 
 </div>
 
-<!-- رسالة النجاح -->
-<div id="success" class="success-message">
-  ✅ تم ارسال البيانات بنجاح! <br>
-  سنتواصل معك خلال 24 ساعة.
-</div>
-
 <h2>Job Application Form</h2> 
 <p class="desc">Join our elite team of hospitality professionals. Fill out the form below and our recruitment team will contact you within 24 hours.</p> 
 
 <form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST">
   
-  <!-- مهم جدا: خلي الرابط هو رابطك الحقي kria22 -->
-  <input type="hidden" name="_next" value="https://kria22.github.io/?success=true">
+  <!-- ده السطر المهم: رجع لموقعك kria22 مباشرة -->
+  <input type="hidden" name="_next" value="https://kria22.github.io/">
+  
   <input type="hidden" name="_subject" value="New Job Application - Staff.Direct London">
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="box">
 
   <div class="form-group"><label>Full Name *</label><input name="Full Name" required></div>
   <div class="form-group"><label>Email Address *</label><input name="Email" type="email" required></div>
@@ -72,8 +48,18 @@ input, select {width: 100%; padding: 15px 16px; border: 2px solid #eee; border-r
   <div class="form-group"><label>Country *</label>
     <select name="Country" required>
       <option value="">Select your country</option>
-      <option>Afghanistan</option><option>Canada</option><option>Egypt</option><option>India</option><option>Nepal</option><option>UK</option><option>USA</option><option>Other</option>
+      <option>Nepal</option><option>UK</option><option>USA</option><option>UAE</option><option>Egypt</option><option>Other</option>
     </select>
   </div>
   <div class="form-group"><label>Job Position *</label>
-   
+    <select name="Job Position" required>
+      <option value="">Select position</option><option>Receptionist</option><option>Chef</option><option>Other</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn">Submit Application</button>
+</form>
+
+</div>
+</body> 
+</html>
