@@ -6,27 +6,25 @@
 <title>Staff Direct - طلب توظيف</title> 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
 <style> 
-:root { --navy: #0A1F44; --gold: #D4AF37; --light-gold: #F5E6C8; } 
-* {box-sizing: border-box; margin: 0; padding: 0;} 
+:root { --navy: #0A1F44; --gold: #D4AF37; } 
+* {box-sizing: border-box;} 
 body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Cairo', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh;} 
-.box { background: #fff; max-width: 550px; width: 100%; padding: 40px 25px; border-radius: 16px; border-top: 5px solid var(--gold); box-shadow: 0 12px 40px rgba(0,0,0,0.3); text-align: center;} 
-.logo-wrap {display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 5px;} 
+.box { background: #fff; max-width: 550px; width: 100%; padding: 40px 25px; border-radius: 16px; border-top: 5px solid var(--gold); text-align: center;} 
+.logo-wrap {display: flex; align-items: center; justify-content: center; gap: 10px;} 
 .logo-icon { width: 45px; height: 45px; background: var(--gold); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--navy); font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; } 
 .logo {font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--navy);} 
-.tag {color: var(--gold); font-size: 11px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase;} 
-h2 {color: var(--navy); margin: 15px 0 5px; font-size: 22px;} 
+.tag {color: var(--gold); font-size: 11px; font-weight: 600; margin-bottom: 20px;} 
+h2 {color: var(--navy); margin: 15px 0 5px;} 
 p {color: #555; margin-bottom: 25px; font-size: 14px;} 
-input, select {width: 100%; padding: 12px 15px; margin-bottom: 15px; border: 2px solid #eee; border-radius: 8px; font-family: 'Cairo'; font-size: 15px; text-align: right; transition: 0.3s;} 
-input:focus, select:focus {border-color: var(--gold); outline: none; box-shadow: 0 0 0 3px rgba(212,175,55,0.2);} 
-button {width: 100%; padding: 14px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; font-family: 'Cairo'; transition: 0.3s;} 
-button:hover {transform: translateY(-2px);} 
+input, select {width: 100%; padding: 14px 15px; margin-bottom: 15px; border: 2px solid #eee; border-radius: 10px; font-family: 'Cairo'; font-size: 15px; text-align: right;} 
+.btn {width: 100%; padding: 16px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; font-family: 'Cairo';} 
 #msg {margin-top: 15px; padding: 12px; border-radius: 8px; display: none; font-weight: 600;}
 </style> 
 </head> 
 <body> 
 <div class="box"> 
 <div class="logo-wrap"> <div class="logo-icon">SD</div> <div class="logo">STAFF DIRECT</div> </div> 
-<div class="tag">Premium Hospitality Recruitment</div> 
+<div class="tag">PREMIUM HOSPITALITY RECRUITMENT</div> 
 <h2>طلب توظيف</h2> 
 <p>املئي البيانات وسنتواصل معك خلال 24 ساعة</p> 
 
@@ -37,9 +35,28 @@ button:hover {transform: translateY(-2px);}
   <select name="البلد" required>
     <option value="">اختر البلد *</option>
     <option>مصر</option><option>السعودية</option><option>الإمارات</option>
-    <option>المغرب</option><option>الجزائر</option><option>تونس</option>
-    <option>ليبيا</option><option>الأردن</option><option>أخرى</option>
+    <option>ليبيا</option><option>أخرى</option>
   </select>
   <select name="الوظيفة" required>
     <option value="">الوظيفة المطلوبة *</option>
-    <option>موظفة استقبال</option>
+    <option>موظفة استقبال</option><option>موظفة نظافة</option>
+    <option>شيف</option><option>نادل/ة</option>
+  </select>
+  <button type="submit" class="btn" id="btn">إرسال الطلب</button>
+</form>
+<div id="msg"></div>
+</div>
+
+<script>
+// رابط الارسال - هنعمله من formsubmit
+const form = document.getElementById('f');
+form.action = "https://formsubmit.co/mosabshareef22@gmail.com";
+form.method = "POST";
+
+form.onsubmit = function(){
+  document.getElementById('btn').disabled = true;
+  document.getElementById('btn').innerText = 'جاري الإرسال...';
+}
+</script>
+</body> 
+</html>
