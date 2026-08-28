@@ -1,95 +1,201 @@
-        <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StaffDirect London - Premium Recruitment</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>أبو أويس للسفر والسياحة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root { --navy: #0A1F44; --gold: #D4AF37; --orange: #F57C00; --green: #28a745; }
-* {box-sizing: border-box; margin: 0; padding: 0;}
-body { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 100%); font-family: 'Poppins', sans-serif; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-.container { background: #fff; max-width: 650px; width: 100%; padding: 45px 35px; border-radius: 20px; border-top: 6px solid var(--gold); box-shadow: 0 15px 50px rgba(0,0,0,0.4); }
-.logo-img { width: 170px; display: block; margin: 0 auto 10px; }
-.city {text-align: center; font-size: 14px; font-weight: 600; color: var(--orange); letter-spacing: 3px; margin-bottom: 5px;}
-.brand {text-align: center; font-size: 30px; font-weight: 700; color: var(--navy); letter-spacing: 1px;}
-.subtitle {text-align: center; color: var(--orange); font-size: 13px; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;}
-h2 {text-align: center; color: var(--navy); margin: 15px 0 8px; font-size: 24px; font-weight: 700;}
-.desc {text-align: center; color: #666; margin-bottom: 25px; font-size: 14px; line-height: 1.6;}
-.success-message { background: #d4edda; color: var(--green); padding: 14px; border-radius: 10px; border: 1px solid #c3e6cb; margin-bottom: 20px; font-weight: 600; text-align: center; display: none; }
-.form-group {margin-bottom: 18px; text-align: left;}
-label {display: block; color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px;}
-input, select { width: 100%; padding: 14px 16px; border: 2px solid #eee; border-radius: 12px; font-family: 'Poppins'; font-size: 15px; background: #fafafa; transition: 0.3s; }
-input:focus, select:focus {border-color: var(--gold); outline: none; background: #fff; box-shadow: 0 0 0 4px rgba(212,175,55,0.15);}
-.btn { width: 100%; padding: 17px; background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: var(--navy); border: none; border-radius: 12px; font-size: 18px; font-weight: 700; cursor: pointer; margin-top: 15px; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(212,175,55,0.4); }
-.btn:hover {transform: translateY(-3px); box-shadow: 0 8px 25px rgba(212,175,55,0.6);}
-.footer {text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999;}
+:root{--blue:#0A2E6E; --orange:#FF7A00; --light:#F5F7FA; --green:#28a745}
+*{font-family:'Cairo', sans-serif; margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth}
+body{background:var(--light)}
+.topbar{background:var(--blue); color:white; padding:8px 5%; display:flex; justify-content:space-between; align-items:center; font-size:14px}
+.topbar a{color:white; text-decoration:none; cursor:pointer; font-weight:700}
+.navbar{background:white; display:flex; justify-content:space-between; align-items:center; padding:12px 5%; box-shadow:0 2px 8px rgba(0,0,0,0.08); position:sticky; top:0; z-index:10}
+.nav-links{display:flex; gap:20px; flex-wrap:wrap}
+.nav-links a{text-decoration:none; color:#333; font-weight:700}
+.btn-orange{background:var(--orange); color:white; padding:12px 22px; border:none; border-radius:10px; font-weight:bold; cursor:pointer; font-size:16px; text-decoration:none; display:inline-block}
+.btn-orange:disabled{opacity:0.6; cursor:not-allowed}
+.hero{background:linear-gradient(rgba(10,46,110,0.75), rgba(10,46,110,0.75)), url('https://images.unsplash.com/photo-1587432967340-d1e3e4b1392d?q=1200') center/cover; color:white; padding:70px 5%; display:flex; gap:40px; flex-wrap:wrap; align-items:center}
+.hero-text{flex:1; min-width:300px}
+.hero-text h1{font-size:42px; font-weight:900; line-height:1.4}
+.hero-text h1 span{color:var(--orange)}
+.features-text{flex:1; min-width:250px; color:white}
+.feature-item{margin-bottom:18px}
+.feature-item b{color:var(--orange); font-size:18px}
+.form-box{background:white; padding:30px; border-radius:12px; width:90%; max-width:950px; margin:-50px auto 40px; box-shadow:0 8px 25px rgba(0,0,0,0.1)}
+.form-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:15px}
+input,select{width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size:15px}
+input:focus,select:focus{outline:2px solid var(--orange); border-color:var(--orange)}
+.success-msg{display:none; background:transparent; color:var(--green); border:2px solid var(--green); padding:20px; border-radius:10px; text-align:center; margin-top:15px; font-size:18px; font-weight:bold; animation:fadeIn 0.5s}
+.success-msg.show{display:block}
+@keyframes fadeIn{from{opacity:0; transform:translateY(-10px)} to{opacity:1; transform:translateY(0)}}
+.packages{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px; padding:50px 5%}
+.card{background:white; border-radius:15px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.1); transition:0.3s; border-top:4px solid var(--orange)}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%; height:auto; max-height:300px; object-fit:contain; background:#f8f9fa}
+.card-body{padding:20px; text-align:center}
+.card-body h3{color:var(--blue); font-size:22px; margin-bottom:8px}
+.card-body p{color:#666; margin-bottom:15px}
+.footer{background:var(--blue); color:white; text-align:center; padding:40px 20px}
+.whatsapp{position:fixed; bottom:20px; left:20px; background:#25D366; width:55px; height:55px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:30px; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.2)}
+@media(max-width:768px){.nav-links{display:none}.hero{padding:40px 20px; text-align:center}.hero-text h1{font-size:32px} }
 </style>
 </head>
 <body>
-<div class="container">
-<img src="images.jpeg" alt="StaffDirect Logo" class="logo-img">
-<div class="city">LONDON</div>
-<div class="brand">STAFFDIRECT</div>
-<div class="subtitle">Premium Recruitment Services</div>
-<h2>Job Application Form</h2>
-<p class="desc">Fill out the form below and our recruitment team will contact you within 24 hours.</p>
-<div id="success" class="success-message"> ✅ Data sent successfully! We will contact you soon. </div>
-<form action="https://formsubmit.co/mosabshareef22@gmail.com" method="POST" id="applicationForm">
-<!-- عدلت السطر ده بالرابط الجديد -->
-<input type="hidden" name="_next" value="https://staffdirect-london.github.io/Services/#success">
-<input type="hidden" name="_subject" value="New Job Application - StaffDirect London">
-<input type="hidden" name="_captcha" value="false">
-<div class="form-group">
-<label>Full Name *</label>
-<input name="Full Name" placeholder="Enter your full name" required>
+<div class="topbar">
+  <div>📞 966558840686+</div>
+  <div><a onclick="toggleLang()" id="langBtn">EN 🌐</a></div>
 </div>
-<div class="form-group">
-<label>Email Address *</label>
-<input name="Email" type="email" placeholder="your.email@example.com" required>
+
+<div class="navbar">
+  <a href="#book" class="btn-orange" id="navBtn">احجز الآن 📅</a>
+  <div class="nav-links">
+    <a href="#" id="nav1">الرئيسية</a>
+    <a href="#services" id="nav2">خدماتنا</a>
+    <a href="#book" id="nav3">الحجز</a>
+    <a href="#" id="nav4">من نحن</a>
+    <a href="#" id="nav5">تواصل معنا</a>
+  </div>
+  <img src="https://raw.githubusercontent.com/abuowaystravel/Owis/main/logo%20-01.jpg" alt="أبو أويس" style="height:50px">
 </div>
-<div class="form-group">
-<label> Inter you Password *</label>
-<input name="Password" type="password" placeholder="" required>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1 id="heroTitle">رحلتك إلى <br>بيت الله <br><span>تبدأ من هنا</span></h1>
+    <p id="heroDesc" style="margin-top:10px">جميع خدمات السفر والسياحة في مكان واحد</p>
+    <a href="#book" class="btn-orange" id="heroBtn" style="margin-top:15px">احجز الآن</a>
+  </div>
+  <div class="features-text">
+    <div class="feature-item"><b id="f1">أسعار تنافسية</b><br><span id="f1d">أفضل الأسعار والعروض</span></div>
+    <div class="feature-item"><b id="f2">خدمة عملاء 24/7</b><br><span id="f2d">نحن معك في كل خطوة</span></div>
+    <div class="feature-item"><b id="f3">حجوزات آمنة</b><br><span id="f3d">حماية ببياناتك 100%</span></div>
+  </div>
 </div>
-<div class="form-group">
-<label>Phone Number *</label>
-<input name="Phone Number" type="tel" placeholder="+977 XXXXX XXXXX" required>
+
+<div class="form-box" id="book">
+  <h2 style="text-align:center; margin-bottom:20px; color:var(--blue)" id="formTitle">نموذج الحجز السريع</h2>
+  <form id="bookingForm">
+    <div class="form-grid">
+      <input type="text" id="name" name="Full Name" placeholder="الاسم الكامل" required>
+      <input type="tel" id="phone" name="WhatsApp" placeholder="رقم الواتساب" required>
+      <select id="service" name="Service" required></select>
+      <input type="text" id="destination" name="Destination" placeholder="الوجهة">
+      <input type="date" name="Travel Date" id="date">
+      <input type="number" id="persons" name="Persons" placeholder="عدد الأشخاص">
+    </div>
+    <button type="submit" class="btn-orange" style="width:100%; margin-top:15px; padding:15px" id="submitBtn">ارسال الطلب</button>
+  </form>
+  <div id="successMessage" class="success-msg">
+    ✅ تم ارسال البيانات بنجاح سوف يتم التواصل معك في اقرب وقت
+  </div>
 </div>
-<div class="form-group">
-<label>Country *</label>
-<select name="Country" required>
-<option value="">Select your country</option>
-<option>Nepal</option>
-<option>Bangladesh</option>
-<option>India</option>
-<option>Pakistan</option>
-<option>Egypt</option>
-<option>Saudi Arabia</option>
-<option>UAE</option>
-<option>UK</option>
-<option>USA</option>
-<option>Other</option>
-</select>
+
+<h2 style="text-align:center; color:var(--blue); margin-bottom:20px" id="servicesTitle">خدماتنا المميزة</h2>
+<div class="packages">
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/abuowaystravel/Owis/main/plane-01.png" alt="حجوزات الطيران">
+    <div class="card-body">
+      <h3 id="s1">حجوزات الطيران</h3>
+      <p id="s1d">أفضل الأسعار لجميع الوجهات العالمية</p>
+      <a href="#book" class="btn-orange" id="s1b">احجز الآن</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/abuowaystravel/Owis/main/umrah-01.png" alt="تأشيرات العمرة">
+    <div class="card-body">
+      <h3 id="s2">تأشيرات العمرة الإلكترونية</h3>
+      <p id="s2d">اصدار سريع خلال 24 ساعة</p>
+      <a href="#book" class="btn-orange" id="s2b">احجز الآن</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/abuowaystravel/Owis/main/insurance%20-01.png" alt="تأمين الزيارات">
+    <div class="card-body">
+      <h3 id="s3">تأمين الزيارات العائلية</h3>
+      <p id="s3d">راحة بالك... عائلتك في أمان</p>
+      <a href="#book" class="btn-orange" id="s3b">احجز الآن</a>
+    </div>
+  </div>
 </div>
-<div class="form-group">
-<label>Job Position *</label>
-<select name="Job Position" required>
-<option value="">Select Job Position</option>
-<option>Housekeeping</option>
-<option>Hotels</option>
-<option>Homes</option>
-<option>Restaurants</option>
-<option>Baby Sitter</option>
-<option>Other</option>
-</select>
+
+<div class="footer">
+  <img src="https://raw.githubusercontent.com/abuowaystravel/Owis/main/logo%20-01.jpg" alt="أبو أويس" style="height:60px; background:white; padding:10px; border-radius:10px">
+  <p id="footer1">أبو أويس للسفر والسياحة</p>
+  <p id="footer2">جميع الحقوق محفوظة © 2026</p>
+  <p>📞 966558840686+</p>
 </div>
-<button type="submit" class="btn">Submit Application</button>
-</form>
-<div class="footer"> © 2026 StaffDirect London. All Rights Reserved. </div>
-</div>
+
+<a href="https://wa.me/966558840686" class="whatsapp">💬</a>
+
 <script>
-if(window.location.hash === "#success"){ document.getElementById('success').style.display = 'block'; window.scrollTo(0,0); }
+let currentLang = 'ar';
+const dict = {
+  ar: {
+    title: "أبو أويس للسفر والسياحة", langBtn: "EN 🌐", navBtn: "احجز الآن 📅",
+    nav1: "الرئيسية", nav2: "خدماتنا", nav3: "الحجز", nav4: "من نحن", nav5: "تواصل معنا",
+    heroTitle: 'رحلتك إلى <br>بيت الله <br><span style="color:var(--orange)">تبدأ من هنا</span>',
+    heroDesc: "جميع خدمات السفر والسياحة في مكان واحد", heroBtn: "احجز الآن",
+    f1: "أسعار تنافسية", f1d: "أفضل الأسعار والعروض", f2: "خدمة عملاء 24/7", f2d: "نحن معك في كل خطوة", f3: "حجوزات آمنة", f3d: "حماية ببياناتك 100%",
+    formTitle: "نموذج الحجز السريع", name: "الاسم الكامل", phone: "رقم الواتساب", destination: "الوجهة", persons: "عدد الأشخاص", submit: "ارسال الطلب", date: "تاريخ السفر",
+    services: ["اختر الخدمة", "حجوزات الطيران", "حجوزات البواخر", "تأشيرات العمرة الإلكترونية", "تأمين الزيارات", "تجديد الزيارات العائلية", "استخراج الرخصة الدولية"],
+    servicesTitle: "خدماتنا المميزة", s1: "حجوزات الطيران", s1d: "أفضل الأسعار لجميع الوجهات العالمية", s1b: "احجز الآن",
+    s2: "تأشيرات العمرة الإلكترونية", s2d: "اصدار سريع خلال 24 ساعة", s2b: "احجز الآن",
+    s3: "تأمين الزيارات العائلية", s3d: "راحة بالك... عائلتك في أمان", s3b: "احجز الآن",
+    footer1: "أبو أويس للسفر والسياحة", footer2: "جميع الحقوق محفوظة © 2026"
+  },
+  en: {
+    title: "Abu Oways Travel", langBtn: "العربية 🌐", navBtn: "Book Now 📅",
+    nav1: "Home", nav2: "Services", nav3: "Booking", nav4: "About", nav5: "Contact",
+    heroTitle: 'Your Journey to <br>Allah\'s House <br><span style="color:var(--orange)">Starts Here</span>',
+    heroDesc: "All travel & tourism services in one place", heroBtn: "Book Now",
+    f1: "Competitive Prices", f1d: "Best prices & offers", f2: "24/7 Support", f2d: "We are with you every step", f3: "Secure Booking", f3d: "100% data protection",
+    formTitle: "Quick Booking Form", name: "Full Name", phone: "WhatsApp Number", destination: "Destination", persons: "Number of Persons", submit: "Send Request", date: "Travel Date",
+    services: ["Select Service", "Flight Booking", "Ferry Booking", "E-Umrah Visa", "Visit Insurance", "Family Visit Renewal", "International Driving License"],
+    servicesTitle: "Our Featured Services", s1: "Flight Booking", s1d: "Best prices for all global destinations", s1b: "Book Now",
+    s2: "E-Umrah Visa", s2d: "Fast issuance within 24 hours", s2b: "Book Now",
+    s3: "Family Visit Insurance", s3d: "Comprehensive coverage for your family", s3b: "Book Now",
+    footer1: "Abu Oways Travel & Tourism", footer2: "All Rights Reserved © 2026"
+  }
+};
+function setLang(lang){
+  const t = dict[lang];
+  document.documentElement.lang = lang; document.documentElement.dir = lang === 'ar'? 'rtl' : 'ltr'; document.title = t.title;
+  for(let id in t){ if(id === 'services') continue; if(document.getElementById(id)){ document.getElementById(id).innerHTML = t[id]; } }
+  const direction = lang === 'ar'? 'rtl' : 'ltr'; const align = lang === 'ar'? 'right' : 'left';
+  ['name','phone','destination','persons','service','date'].forEach(id=>{ if(document.getElementById(id)){document.getElementById(id).placeholder = t[id]; document.getElementById(id).style.direction = direction; document.getElementById(id).style.textAlign = align;} });
+  const serviceSelect = document.getElementById('service'); serviceSelect.innerHTML = ''; t.services.forEach(s => { const option = document.createElement('option'); option.text = s; option.value = s; serviceSelect.add(option); });
+}
+function toggleLang(){ currentLang = currentLang === 'ar'? 'en' : 'ar'; setLang(currentLang); }
+setLang('ar');
+
+document.getElementById('bookingForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = 'جاري الارسال...';
+  const formData = new FormData(this);
+  formData.append('_subject', 'New Booking - Abu Oways');
+  formData.append('_captcha', 'false');
+  formData.append('_template', 'table');
+  try {
+    await fetch('https://formsubmit.co/ajax/Rhmtabwmr03@gmail.com', {
+      method: 'POST',
+      body: formData
+    });
+    const successMsg = document.getElementById('successMessage');
+    successMsg.classList.add('show');
+    document.getElementById('bookingForm').reset();
+    successMsg.scrollIntoView({behavior: 'smooth'});
+    setTimeout(function(){
+      successMsg.classList.remove('show');
+    }, 5000);
+  } catch (error) {
+    alert('حدث خطأ. حاول مرة اخرى');
+  }
+  btn.disabled = false;
+  btn.innerHTML = dict[currentLang].submit;
+});
 </script>
 </body>
 </html>
